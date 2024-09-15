@@ -19,7 +19,6 @@
   padding-left: 170px;
   justify-content: center;
   gap: 10px;
-
 }
 
 .text-right {
@@ -57,15 +56,86 @@ h3 {
 }
 
 .form-outline {
-  width: 150%;
+  width: 100%;
 }
 
 .form-outline input {
   border-radius: 0;
   width: 300px;
-
 }
 
 .form-control {
   height: 50px;
+}
+
+/*media query*/
+@media (max-width: 1200px) {
+  .text-left {
+    padding-left: 100px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .btn-custom {
+    width: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-left {
+    padding-left: 50px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .text-left {
+    padding-left: 0;
+  }
+
+  .text-right {
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .form-outline input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .btn-custom {
+    width: 100px;
+    height: 40px;
+  }
 }

@@ -24,7 +24,7 @@
 
 .footer_menu .nav-link {
   margin: 0 15px;
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s;
   text-decoration: none;
 }
@@ -37,7 +37,7 @@
   color: #979393;
   margin-top: 10px;
   font-size: 10px;
-  text-align:start;
+  text-align: start;
   margin-left: 132px;
 }
 
@@ -46,3 +46,61 @@
   color: #ffc800;
 }
 
+.navbar-toggler {
+  background-color: #ffc800;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/*media query*/
+@media (min-width: 1200px) {
+  .footer_menu {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .footer_menu {
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer_menu .nav-link {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .footer_menu {
+    padding: 0;
+  }
+
+  .footer_menu .nav-link {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_area {
+    padding: 20px;
+
+  .footer-logo img {
+    width: 80px;
+  }
+
+  .footer_menu .nav-link {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .copywight {
+    font-size: 10px;
+    margin-left: 0;
+  }
+}
+}
