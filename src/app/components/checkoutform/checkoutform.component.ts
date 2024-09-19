@@ -1,12 +1,33 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-checkoutform',
+  selector: 'app-checkout-form',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './checkoutform.component.html',
-  styleUrl: './checkoutform.component.css'
+  styleUrls: ['./checkoutform.component.css']
 })
-export class CheckoutformComponent {
+export class CheckoutFormComponent {
+  checkoutData = {
+    firstName: '',
+    lastName: '',
+    company: '',
+    email: '',
+    country: 'united-states',
+    address: '',
+    town: '',
+    zipCode: '',
+    phone: '',
+    comment: '',
+    createAccount: false,
+    shipDifferent: false,
+    paymentMethod: '',
+    cardNumber: ''
+  };
 
+  onSubmit() {
+    console.log('Form Data:', this.checkoutData);
+  }
 }

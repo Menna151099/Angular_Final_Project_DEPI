@@ -1,1 +1,65 @@
-<p>checkoutform works!</p>
+<div class="container checkout-form-container">
+  <h2 class="mb-4">Checkout</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input placeholder="First Name" type="text" id="first-name" class="form-control" [(ngModel)]="checkoutData.firstName" name="firstName" required />
+      </div>
+      <div class="col-md-6">
+        <input placeholder="Last Name" type="text" id="last-name" class="form-control" [(ngModel)]="checkoutData.lastName" name="lastName" required />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input placeholder="Company Name" type="text" id="company" class="form-control" [(ngModel)]="checkoutData.company" name="company" />
+    </div>
+
+    <div class="mb-3">
+      <input placeholder="Email" type="email" id="email" class="form-control" [(ngModel)]="checkoutData.email" name="email" required />
+    </div>
+
+    <div class="mb-3">
+      <select id="country" class="form-select" [(ngModel)]="checkoutData.country" name="country" required>
+        <option value="united-states">United States</option>
+        <option value="united-kingdom">United Kingdom</option>
+        <option value="germany">Germany</option>
+        <option value="france">France</option>
+        <option value="india">India</option>
+        <option value="australia">Australia</option>
+        <option value="brazil">Brazil</option>
+        <option value="canada">Canada</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <input placeholder="Address" type="text" id="address" class="form-control" [(ngModel)]="checkoutData.address" name="address" required />
+    </div>
+
+    <div class="mb-3">
+      <input placeholder="Town" type="text" id="town" class="form-control" [(ngModel)]="checkoutData.town" name="town" required />
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input placeholder="Zip Code" type="text" id="zip-code" class="form-control" [(ngModel)]="checkoutData.zipCode" name="zipCode" required />
+      </div>
+      <div class="col-md-6">
+        <input placeholder="Phone No" type="tel" id="phone" class="form-control" [(ngModel)]="checkoutData.phone" name="phone" required />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <textarea placeholder="Leave a Comment about your order" id="comment" class="form-control" [(ngModel)]="checkoutData.comment" name="comment"></textarea>
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="create-account" [(ngModel)]="checkoutData.createAccount" name="createAccount" />
+      <label class="form-check-label checkbox-label" for="create-account">Create an account</label>
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="ship-different" [(ngModel)]="checkoutData.shipDifferent" name="shipDifferent" />
+      <label class="form-check-label checkbox-label" for="ship-different">Ship to a different address</label>
+    </div>
+  </form>
+</div>
