@@ -1,8 +1,9 @@
 .checkout-form-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
   background-color: transparent;
+  height: auto;
 }
 
 .checkout-form-container h2 {
@@ -58,5 +59,11 @@ input, select, textarea {
 .checkbox-label input[type="checkbox"]:checked {
   background-color: blue;
   border-color: blue;
+}
+
+@media (min-width: 750px) and (max-width: 1050px) {
+  .checkout-form-container {
+    width:auto ;
+  }
 }
 

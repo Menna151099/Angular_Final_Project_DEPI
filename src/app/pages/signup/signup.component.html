@@ -1,1 +1,28 @@
-<p>signup works!</p>
+<div class="login-container">
+  <div class="login-form">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" ngModel required placeholder="Insert your email address" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel required placeholder="Insert your password" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" ngModel required placeholder="Confirm your password" />
+      </div>
+
+      <button type="submit" class="btn-submit">Sign Up</button>
+
+      <div class="forgot-password">
+        <a href="#">Already have an account? Login</a>
+      </div>
+    </form>
+  </div>
+</div>

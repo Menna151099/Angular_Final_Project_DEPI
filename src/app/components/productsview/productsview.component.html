@@ -1,1 +1,73 @@
-<p>productsview works!</p>
+<div class="single-product-area section-padding-100 clearfix">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mt-50">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Furniture</a></li>
+            <li class="breadcrumb-item"><a href="#">Chairs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">White Modern Chair</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row" id="prodetails">
+      <div class="col-12 col-lg-7">
+        <div class="single-pro-image">
+          <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div *ngFor="let img of images; let i = index" class="carousel-item" [class.active]="i === currentImageIndex">
+                <img [src]="img" width="100%" alt="photo" [class.active-img]="i === currentImageIndex">
+              </div>
+            </div>
+          </div>
+
+          <div class="small-img-group">
+            <div class="small-img-col" *ngFor="let img of images; let i = index">
+              <img [src]="img" width="100%" class="small-img" alt="photo" (click)="changeImage(i)" [class.active-img]="i === currentImageIndex">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="single-pro-details">
+          <div class="line"></div>
+          <h2>$180</h2>
+          <a href="#">
+            <h6>White Modern Chair</h6>
+          </a>
+
+          <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
+            <div class="ratings">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+
+            <div class="review">
+              <a href="#">Write A Review</a>
+            </div>
+          </div>
+          <p class="avaibility"><i class="fa fa-circle"></i> In Stock</p>
+
+          <div class="short_overview my-5">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?
+            </p>
+          </div>
+
+          <div class="cart-btn d-flex mb-50">
+            <p>Qty</p>
+            <input class="quantity" type="number" value="1">
+          </div>
+          <button type="submit" name="addtocart" value="5" class="normal">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

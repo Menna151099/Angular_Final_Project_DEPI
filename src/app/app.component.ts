@@ -1,17 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SubscribeComponent } from './components/subscribe/subscribe.component';
-import { FooterComponent } from '../app/components/footer/footer.component';
-import { UpbuttonComponent } from '../app/components/upbutton/upbutton.component';
-import { CheckoutFormComponent } from '../app/components/checkoutform/checkoutform.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  template: `<app-checkout-form></app-checkout-form>`,
+  template: `<router-outlet></router-outlet>`,
   standalone: true,
-  imports: [RouterOutlet,SubscribeComponent, FooterComponent,UpbuttonComponent,CheckoutFormComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterModule],
 })
 export class AppComponent {
   title = 'e-commerce';

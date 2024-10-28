@@ -1,12 +1,18 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, CommonModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
+export class FooterComponent {
+  isCollapsed = true;
 
-export class FooterComponent  {
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed; 
+  }
 }

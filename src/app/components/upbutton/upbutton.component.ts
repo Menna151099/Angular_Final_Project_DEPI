@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-upbutton',
   standalone: true,
@@ -11,15 +12,13 @@ export class UpbuttonComponent {
   showButton = false;
 
   @HostListener('window:scroll', [])
-  onWindowScroll = (): void => {
+  onWindowScroll(): void {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.showButton = scrollPosition > 300;
+    console.log('Scroll Position:', scrollPosition);
+    this.showButton = scrollPosition > 10;  
+  }
 
-   /* console.log('Scroll Position:', scrollPosition);
-    console.log('Show Button:', this.showButton);*/
-  };
-
-  scrollToTop = (): void => {
+  scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }
 }

@@ -1,1 +1,75 @@
-<p>listitems works!</p>
+<div class="shop_sidebar_area">
+  <!-- Categories Widget -->
+  <div class="widget catagory mb-50">
+    <h6 class="widget-title mb-30">Categories</h6>
+    <div class="catagories-menu">
+      <ul>
+        <li class="active"><a href="#">Chairs</a></li>
+        <li><a href="#">Beds</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Furniture</a></li>
+        <li><a href="#">Home Deco</a></li>
+        <li><a href="#">Dressings</a></li>
+        <li><a href="#">Tables</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Brands Widget -->
+  <div class="widget brands mb-50">
+    <h6 class="widget-title mb-30">Brands</h6>
+    <div class="widget-desc">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="amado">
+        <label class="form-check-label" for="amado">Amado</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ikea">
+        <label class="form-check-label" for="ikea">Ikea</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="furniture">
+        <label class="form-check-label" for="furniture">Furniture Inc</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="factory">
+        <label class="form-check-label" for="factory">The factory</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="artdeco">
+        <label class="form-check-label" for="artdeco">Artdeco</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Color Widget -->
+  <div class="widget color mb-50">
+    <h6 class="widget-title mb-30">Color</h6>
+    <div class="widget-desc">
+      <ul class="d-flex">
+        <li><a href="#" class="color1"></a></li>
+        <li><a href="#" class="color2"></a></li>
+        <li><a href="#" class="color3"></a></li>
+        <li><a href="#" class="color4"></a></li>
+        <li><a href="#" class="color5"></a></li>
+        <li><a href="#" class="color6"></a></li>
+        <li><a href="#" class="color7"></a></li>
+        <li><a href="#" class="color8"></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Price Widget -->
+  <div class="widget price mb-50">
+    <h6 class="widget-title mb-30">Price</h6>
+    <div class="widget-desc">
+      <div class="slider-range">
+        <div class="slider-container">
+          <input type="range" min="10" max="1000" value="10" class="slider" id="minPrice" (input)="updateMinPrice($event)">
+          <input type="range" min="10" max="1000" value="1000" class="slider" id="maxPrice" (input)="updateMaxPrice($event)">
+        </div>
+        <div class="range-price"> ${{minPrice}} - ${{maxPrice}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

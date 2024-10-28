@@ -1,1 +1,62 @@
-<p>sidenav works!</p>
+<!-- burger list -->
+<div class="burger-container" *ngIf="!isSidenavOpen && isSmallScreen" (click)="toggleSidenav()">
+  <div class="logo-small-screen">
+    <a routerLink="/home">
+      <img src="assests/imgs/logo.png" alt="Logo">
+    </a>
+  </div>
+  <div class="burger-icon" (click)="toggleSidenav()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </div>
+</div>
+
+<header class="header-area" [class.open]="isSidenavOpen || !isSmallScreen">
+  <div class="nav-close" *ngIf="isSmallScreen" (click)="toggleSidenav()">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo mb-100">
+    <a routerLink="/home">
+      <img src="assests/imgs/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Amado Nav -->
+  <nav class="amado-nav">
+    <ul>
+      <li class="active"><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/shop">Shop</a></li>
+      <li><a routerLink="/product">Product</a></li>
+      <li><a routerLink="/cart">Cart</a></li>
+      <li><a routerLink="/checkout">Checkout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Button Group -->
+  <div class="amado-btn-group mt-30 mb-100">
+    <a href="#" class="btn amado-btn mb-15">%Discount%</a>
+    <a href="#" class="btn amado-btn active">New this week</a>
+  </div>
+
+  <!-- Cart Menu -->
+  <div class="cart-fav-search mb-100">
+    <a routerLink="/cart" class="cart-nav">
+      <img src="assests/imgs/cart.png" alt="Cart"> Cart <span>(0)</span>
+    </a>
+    <a href="#" class="fav-nav">
+      <img src="assests/imgs/favorites.png" alt="Favorite"> Favourite
+    </a>
+    <a routerLink="/search" class="search-nav">
+      <img src="assests/imgs/search.png" alt="Search"> Search
+    </a>
+  </div>
+
+  <!-- Social Button -->
+  <div class="social-info d-flex justify-content-between">
+    <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+    <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  </div>
+</header>

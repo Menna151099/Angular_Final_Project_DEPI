@@ -1,0 +1,66 @@
+.home-grid {
+  display: grid;
+  grid-template-columns: 0fr 3fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "sidenav content"
+    "subscribe subscribe"
+    "upbutton upbutton"
+    "footer footer";
+}
+
+app-sidenav {
+  grid-area: sidenav;
+}
+
+.home-content {
+  grid-area: content;
+}
+
+app-upbutton {
+  grid-area: upbutton;
+}
+
+app-subscribe {
+  grid-area: subscribe;
+}
+
+app-footer {
+  grid-area: footer;
+}
+
+
+/* media query */
+@media (min-width: 1200px) {
+  .home-grid {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidenav"
+      "content"
+      "subscribe"
+      "upbutton"
+      "footer";
+  }
+
+}
+
+@media (max-width: 480px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidenav"
+      "content"
+      "subscribe"
+      "upbutton"
+      "footer";
+  }
+}
+
+

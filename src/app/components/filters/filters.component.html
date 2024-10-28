@@ -1,1 +1,260 @@
-<p>filters works!</p>
+<div class="amado_product_area section-padding-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-14">
+        <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+          <div class="total-products">
+            <p>Showing 1-8 of 25</p>
+            <div class="view d-flex">
+              <a href="#">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <!-- product-sorting -->
+          <div class="product-sorting d-flex">
+            <div class="sort-by-date d-flex align-items-center mr-15">
+              <p class="mr-2">Sort by:</p>
+              <select (change)="onSortChange($event)" [(ngModel)]="selectedSort">
+                <option *ngFor="let option of sortOptions" [value]="option.value">{{ option.label }}</option>
+              </select>
+            </div>
+
+            <div class="view-product d-flex align-items-center">
+              <p class="mr-2">View:</p>
+              <select (change)="onViewChange($event)" [(ngModel)]="selectedView">
+                <option *ngFor="let option of viewOptions" [value]="option">{{ option }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Listing -->
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product1.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product2.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Products -->
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product2.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product3.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product3.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product4.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product4.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product5.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product5.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product6.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="assests/imgs/product6.jpg" alt="">
+            <img class="hover-img" src="assests/imgs/product1.jpg" alt="">
+          </div>
+          <div class="product-description d-flex align-items-center justify-content-between">
+            <div class="product-meta-data">
+              <div class="line"></div>
+              <p class="product-price">$180</p>
+              <a routerLink="/product">
+                <h6>Modern Chair</h6>
+              </a>
+            </div>
+            <div class="ratings-cart text-right">
+              <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <div class="cart">
+                <a routerLink="/cart" data-toggle="tooltip" data-placement="left" title="Add to Cart">
+                  <img src="assests/imgs/cart.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="navigation">
+        <ul class="pagination justify-content-end mt-50">
+          <li class="page-item active">
+            <a class="page-link" href="#">01.</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">02.</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">03.</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">04.</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+

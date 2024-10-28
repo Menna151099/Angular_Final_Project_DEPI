@@ -1,1 +1,35 @@
-<p>carttotal works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-12 mx-auto">
+      <div class="cart-total p-3 border">
+        <h3>Cart Total</h3>
+        <div class="subtotal d-flex justify-content-between">
+          <p>Subtotal:</p>
+          <span>$140.00</span>
+        </div>
+        <div class="delivery d-flex justify-content-between">
+          <p>Delivery:</p>
+          <span>Free</span>
+        </div>
+        <div class="total d-flex justify-content-between mb-3">
+          <p>Total:</p>
+          <span>$140.00</span>
+        </div>
+
+        <div class="payment-methods mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cod" />
+            <label class="form-check-label" for="cod">Cash on Delivery</label>
+          </div>
+          <div class="form-check d-flex align-items-center">
+            <input class="form-check-input" type="checkbox" id="paypal" />
+            <label class="form-check-label" for="paypal" class="mr-2">Paypal</label>
+            <img src="assests/imgs/paypal.png" alt="Paypal" style="width: 80px; margin-left: 20px;">
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-warning w-100 mt-5">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
