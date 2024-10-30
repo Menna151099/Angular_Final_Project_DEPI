@@ -4,6 +4,7 @@ import { SubscribeComponent } from '../../components/subscribe/subscribe.compone
 import { UpbuttonComponent } from '../../components/upbutton/upbutton.component';
 import { ProductsviewComponent} from '../../components/productsview/productsview.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
+import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
   selector: 'app-product',
@@ -15,7 +16,8 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
     SubscribeComponent,
     UpbuttonComponent,
     ProductsviewComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent
   ]
 })
 export class ProductComponent {

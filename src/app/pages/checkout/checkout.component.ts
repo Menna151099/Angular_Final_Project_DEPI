@@ -5,6 +5,7 @@ import { UpbuttonComponent } from '../../components/upbutton/upbutton.component'
 import { CartTotalComponent } from '../../components/carttotal/carttotal.component';
 import { CheckoutFormComponent } from '../../components/checkoutform/checkoutform.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
+import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
   selector: 'app-checkout',
@@ -17,8 +18,11 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
     UpbuttonComponent,
     CartTotalComponent,
     CheckoutFormComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent
+
   ]
 })
 export class CheckoutComponent { }
+
 

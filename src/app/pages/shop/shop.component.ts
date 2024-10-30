@@ -5,6 +5,8 @@ import { UpbuttonComponent } from '../../components/upbutton/upbutton.component'
 import { FiltersComponent } from '../../components/filters/filters.component';
 import { ListitemsComponent} from '../../components/listitems/listitems.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
+import { SearchComponent } from '../../components/search/search.component';
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -16,7 +18,8 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
     UpbuttonComponent,
     FiltersComponent,
     ListitemsComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent
   ]
 })
 export class ShopComponent{

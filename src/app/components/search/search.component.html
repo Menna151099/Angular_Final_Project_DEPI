@@ -1,0 +1,21 @@
+<div class="search-wrapper section-padding-100"
+     *ngIf="isPopupOpen"
+     [ngClass]="{'section-visible': isPopupOpen}">
+  <div class="search-close" (click)="closePopup()">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="search-content">
+          <form action="#" method="get">
+            <input type="search" name="search" id="search" placeholder="Type your keyword..." />
+            <button type="button" (click)="performSearch()">
+              <img src="assests/imgs/search.png" alt="Search Icon" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

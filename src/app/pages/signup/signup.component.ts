@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,23 +12,19 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  constructor(private authService: AuthService) {}
+  user = {
+    email: '',
+    password: '',
+    confirmPassword: ''
+  };
+
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit(signUpForm: any) {
     if (signUpForm.valid) {
-      this.authService.signUp(signUpForm.value).subscribe({
-        next: (response) => {
-          console.log('User signed up successfully', response);
-        },
-        error: (error) => {
-          console.error('Error during sign up', error);
-        },
-        complete: () => {
-          console.log('Sign up process completed');
-        }
-      });
+      this.authService.signUp(signUpForm.value);
+
+      this.router.navigate(['/home']);
     }
   }
 }
-
-

@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://example.com/api';
+  private userKey = 'user';
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  signUp(userData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/signup`, userData);
+  signUp(userData: any): void {
+    console.log('User signed up with data:', userData);
+    localStorage.setItem(this.userKey, JSON.stringify(userData));
+  }
+
+  login(email: string, password: string): boolean {
+    const user = JSON.parse(localStorage.getItem(this.userKey) || 'null');
+
+    if (user && user.email === email && user.password === password) {
+      return true;
+    }
+    return false; 
   }
 }

@@ -5,20 +5,31 @@
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" ngModel required placeholder="Insert your email address" />
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required placeholder="Insert your email address" #email="ngModel" />
+        <div *ngIf="email.invalid && email.touched">
+          <small *ngIf="email.errors?.['required']">Email is required</small>
+          <small *ngIf="email.errors?.['email']">Invalid email format</small>
+        </div>
       </div>
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" ngModel required placeholder="Insert your password" />
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required minlength="6" placeholder="Insert your password" #password="ngModel" />
+        <div *ngIf="password.invalid && password.touched">
+          <small *ngIf="password.errors?.['required']">Password is required</small>
+          <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</small>
+        </div>
       </div>
 
       <div class="form-group">
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" ngModel required placeholder="Confirm your password" />
+        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required placeholder="Confirm your password" #confirmPassword="ngModel" />
+        <div *ngIf="confirmPassword.invalid && confirmPassword.touched">
+          <small *ngIf="confirmPassword.errors?.['required']">Confirm password is required</small>
+        </div>
       </div>
 
-      <button type="submit" class="btn-submit">Sign Up</button>
+      <button type="submit" class="btn-submit" [disabled]="signUpForm.invalid">Sign Up</button>
 
       <div class="forgot-password">
         <a href="#">Already have an account? Login</a>

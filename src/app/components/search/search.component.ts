@@ -1,31 +1,30 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { PopupService } from '../../popup.service';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  imports: [CommonModule]
 })
-export class SearchComponent {
-  isOpen = false;
-  searchTerm: string = '';
+export class SearchComponent implements OnInit {
+  isPopupOpen = false;
 
-  @Output() closePopup = new EventEmitter<void>();
+  constructor(private popupService: PopupService) {}
 
-  open() {
-    this.isOpen = true;
+  ngOnInit() {
+    this.popupService.popupState$.subscribe((isOpen) => {
+      this.isPopupOpen = isOpen;
+    });
   }
 
-  close() {
-    this.isOpen = false;
-    this.closePopup.emit();
+  closePopup() {
+    this.popupService.closePopup();
   }
 
-  search() {
-    console.log('search', this.searchTerm);
-    this.close();
+  performSearch() {
+    console.log('Search initiated');
   }
 }

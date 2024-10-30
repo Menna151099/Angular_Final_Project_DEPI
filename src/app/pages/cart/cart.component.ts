@@ -5,6 +5,7 @@ import { UpbuttonComponent } from '../../components/upbutton/upbutton.component'
 import { CartTotalComponent } from '../../components/carttotal/carttotal.component';
 import { CarttableComponent } from '../../components/carttable/carttable.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
+import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
   selector: 'app-cart',
@@ -17,7 +18,8 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
     UpbuttonComponent,
     CartTotalComponent,
     CarttableComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent
   ]
 })
 export class CartComponent {

@@ -4,6 +4,7 @@ import { SubscribeComponent } from '../../components/subscribe/subscribe.compone
 import { UpbuttonComponent } from '../../components/upbutton/upbutton.component';
 import { ItemComponent } from '../../components/item/item.component';
 import { SidenavComponent } from '../../components/sidenav/sidenav.component';
+import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
   selector: 'app-home',
@@ -15,14 +16,10 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
     SubscribeComponent,
     UpbuttonComponent,
     ItemComponent,
-    SidenavComponent
+    SidenavComponent,
+    SearchComponent
   ],
 })
 export class HomeComponent {
   title = 'e-commerce';
 }
-
-
-
-
-
